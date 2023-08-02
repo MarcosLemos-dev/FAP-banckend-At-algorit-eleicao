@@ -1,0 +1,67 @@
+/*
+Instruções do projeto:
+
+Desenvolva um código que simule uma eleição com três candidatos.
+- candidato_X => 889
+- candidato_Y => 847
+- candidato_Z => 515
+- branco => 0
+
+O código deve perguntar se deseja finalizar a votação depois do voto. Caso o número do voto não corresponda a nenhum candidato ou seja branco, ele deve ser tratado como nulo. Se for inserido um texto ao invés de número, o código deve retornar uma mensagem para votar novamente.
+
+Quando a votação for finalizada, o código deverá mostrar o vencedor, aquele com o maior número de votos e, também, a quantidade de votos de cada candidato, os brancos e nulos. 
+
+
+*/
+/*desenvolvido no programiz javascript online compiler*/
+
+let c1 = 0;// representa o candidato_X 
+let c2 = 0;//representa o candidato_Y
+let c3 = 0;//representa o candidato_Z
+let votoBranco = 0;//representa os brancos e nulos
+let votacao;
+let voto;
+
+do{
+
+   voto = parseInt(prompt("para votar digite: \n o numero 1 para candidato1:   \n, o numero 2 para candidato2:   \n, ou o numero 3 para candidato3: \n  "));
+   
+if(voto>=0 && voto <=9999999){
+if(voto == 1){
+c1 = c1 + 1
+}
+else if(voto == 2){
+c2 = c2 + 1
+}
+else if(voto == 3){
+c3 = c3 + 1
+}
+else{
+votoBranco = votoBranco + 1;
+}
+
+}else{
+    console.log("votar novamente , Insira somente numeros!");
+}
+votacao = prompt("deseja continuar a votacao digite sim ou nao ");
+}while(votacao=='sim')
+
+if(c1>c2 && c1>c3){
+    console.log("candidato 1: foi o vencedor numero de voto é: ", c1,'votos');
+}else if(c2>c1 && c2>c3){
+console.log("candidato 2: foi o vencedor numero de voto é: ", c2,'votos');
+}else if(c3>c1 && c3>c2){
+console.log("candidato 3:foi o vencedor numero de voto é: ", c3,'votos');
+}else if(votoBranco>c1 && votoBranco>c2 && votoBranco>c3) {
+console.log("teve mais votos em brancos do que os votos em candidatos o numero foi de :  ", votoBranco ,'votos');
+}else{
+    console.log("Empate não houve vencedores");
+}
+
+console.log("candidato 1:", c1,'votos');
+console.log("candidato 2:", c2,'votos');
+console.log("candidato 3:", c3,'votos');
+console.log("votos brancos:", votoBranco,'votos');
+
+ console.log('fim do processo de votação');
+ /*desenvolvido no programiz javascript online compiler*/
