@@ -24,16 +24,16 @@ let voto;
 
 do{
 
-   voto = parseInt(prompt("para votar digite: \n o numero 1 para candidato1:   \n, o numero 2 para candidato2:   \n, ou o numero 3 para candidato3: \n  "));
+   voto = parseInt(prompt("para votar digite: \n o numero 889 para candidato_X:   \n, o numero 847 para candidato_Y:   \n, ou o numero 515 para candidato_Z: \n  ou  numero 0 para candidato Branco: \n"));
    
 if(voto>=0 && voto <=9999999){
-if(voto == 1){
+if(voto == 889){
 c1 = c1 + 1
 }
-else if(voto == 2){
+else if(voto == 847){
 c2 = c2 + 1
 }
-else if(voto == 3){
+else if(voto == 515){
 c3 = c3 + 1
 }
 else{
@@ -47,20 +47,20 @@ votacao = prompt("deseja continuar a votacao digite sim ou nao ");
 }while(votacao=='sim')
 
 if(c1>c2 && c1>c3){
-    console.log("candidato 1: foi o vencedor numero de voto é: ", c1,'votos');
+    console.log("candidato_X: foi o vencedor numero de voto é: ", c1,'votos');
 }else if(c2>c1 && c2>c3){
-console.log("candidato 2: foi o vencedor numero de voto é: ", c2,'votos');
+console.log("candidato_Y: foi o vencedor numero de voto é: ", c2,'votos');
 }else if(c3>c1 && c3>c2){
-console.log("candidato 3:foi o vencedor numero de voto é: ", c3,'votos');
+console.log("candidato_Z:foi o vencedor numero de voto é: ", c3,'votos');
 }else if(votoBranco>c1 && votoBranco>c2 && votoBranco>c3) {
 console.log("teve mais votos em brancos do que os votos em candidatos o numero foi de :  ", votoBranco ,'votos');
 }else{
     console.log("Empate não houve vencedores");
 }
 
-console.log("candidato 1:", c1,'votos');
-console.log("candidato 2:", c2,'votos');
-console.log("candidato 3:", c3,'votos');
+console.log("candidato_X:", c1,'votos');
+console.log("candidato_Y:", c2,'votos');
+console.log("candidato_Z:", c3,'votos');
 console.log("votos brancos:", votoBranco,'votos');
 
  console.log('fim do processo de votação');
